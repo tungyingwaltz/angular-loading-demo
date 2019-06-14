@@ -1,0 +1,18 @@
+<h1>Loading Demo</h1>
+
+<ng-template #loading>
+  <div>loading ...</div>
+</ng-template>
+<div *ngIf="!dataLoading else loading">
+  data: {{data}}
+</div>
+<div *ngIf="!data2Loading else loading">
+  data2: {{data2}}
+</div>
+<div *ngIf="!data3Loading else loading">
+  data3: {{data3}}
+</div>
+
+<div *ngIf="!allLoading() else loading">
+  All Loaded
+</div>
